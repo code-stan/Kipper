@@ -3,12 +3,14 @@ import Layout from "./Layout/Layout";
 import Homepage from "./Homepage/Homepage";
 import Webapppage from "./Webapppage/Webapppage";
 
+import '../Styles/styles.scss'
+
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout/>}>
         <Route index element={<Homepage/>}/>
-        <Route index element={<Webapppage/>}/>
+        <Route path="get-started" element={<Webapppage/>}/>
       </Route>
     )
   )

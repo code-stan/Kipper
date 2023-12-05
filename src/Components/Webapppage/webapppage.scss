@@ -1,0 +1,29 @@
+@import '../../Styles/styles.scss';
+
+.webapppage{
+    @include flex(center, center);
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    
+    .record-options{
+        max-width: 60rem;
+        min-width: 30rem;
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 2rem;
+        
+        .record-child{
+            gap: 1rem;
+            width: 100%;
+            padding: 2rem;
+            font-size: 1.8rem;
+            @extend %button-style;
+            
+
+            img{
+                width: 20px;
+                aspect-ratio: 1 / 1;
+            }
+        }
+    }
+}

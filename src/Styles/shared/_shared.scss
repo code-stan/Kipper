@@ -1,0 +1,48 @@
+%get-started-child{
+    max-width: 70rem;
+    min-width: 30rem;
+    padding: 3rem;
+    background-color: $Pale-White;
+    margin: 25vh auto 0;
+    @include flex(left, center);
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 1rem;
+}
+
+%button-style{
+    background-color: $Purple;
+        color: $Pale-White;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 1.2rem 3.8rem;
+        border-radius: .5rem;
+        position: relative;
+    
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            border-radius: .5rem;
+            inset: .4rem calc((100% - 90%) / 2) auto;
+            width: 90%;
+            transition: opactiy .2s;
+            background-color: $Dim-Charcoal;
+            height: 100%;
+        }
+    
+        &:active {
+            top: .4rem;
+    
+            &::after {
+                opacity: 0;
+            }
+        }
+}
+
+%record-child-heading{
+    font-family: $ff-lg;
+    color: $Purple;
+    border-bottom: 2px solid $Dim-Charcoal;
+}

@@ -1,0 +1,22 @@
+$Purple: #81368A; // Accent color
+$Pale-White: #F5F2F2; // Background color
+$Dim-Charcoal: #090808; // Text color;
+
+$ff-sm: "Sequel-Sans", system-ui, -apple-system, 'Helvetica Neue';
+$ff-lg: "Space-Grotesk", system-ui, -apple-system, 'Helvetica Neue';
+
+
+
+@mixin flex($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+// $fonts:(
+//     );
+
+// @function fonts($name){
+//     @return map-get($map: $fonts, $key: $name)
+// }

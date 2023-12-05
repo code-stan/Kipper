@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    font-family: system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $ff-sm;
+    color: $Dim-Charcoal;
+    background-color: $Pale-White;
+    min-height: 100vh;
+    background-image: url("../Assets/note-bg.jpg");
+    background-blend-mode: multiply;
+    background-position: 0 0;
+    background-size: .8rem;
+    
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex: 1;
+}
+/* =========================
+      |GENERAL STYLINGS|
+========================= */
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding-inline: 5%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+      |ASIDE|
+========================= */
+.gh-link, .marquee{
+    display: flex;
+    gap: 1rem;
+}
+aside{
+    position: fixed;
+    top: .2rem;
+    right: .2rem;
+    padding: .8rem;
+    background-color: $Purple;
+    width: 15rem;
+    overflow: hidden;
+}
+.marquee{
+    will-change: transform;
+    animation: broadcast 3s linear infinite;
+    color: $Pale-White;
+}
+@keyframes broadcast{
+    100%{
+        transform: translateX(calc(-100% - 1rem))
+    }
+}
+/* =========================
+      |FOOTER|
+========================= */
+footer{
+    margin: auto auto .5rem;
+
+    span{
+        position: relative;
+    }
+    span::after{
+        content: "";
+        position: absolute;
+        bottom: .05rem;
+        left: 0;
+        width: 100%;
+        height: .3rem;
+        background-color: $Purple;
+    }
+}
+/* =========================
+      ||
+========================= */

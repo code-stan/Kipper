@@ -1,0 +1,58 @@
+@import "../../Styles/styles.scss";
+
+.send-record{
+    @extend %get-started-child;
+
+    h2{
+        @extend %record-child-heading;
+    }
+    &-form {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+    }
+
+    .getDID-field,
+    .select-folder,
+    .send-msg {
+        @include flex(left, center);
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    label {
+        color: $Purple;
+        font-weight: 500;
+    }
+
+    input {
+        padding: .5rem;
+        outline: none;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+
+    textarea {
+        width: 100%;
+        resize: none;
+        // border: none;
+
+        &:focus {
+            border: 2px;
+        }
+    }
+
+    button {
+        @extend %button-style;
+
+        &:active {
+            top: unset;
+            transition: .25ms;
+            scale: 0.95;
+        }
+
+        width: max-content;
+        margin-inline: auto;
+    }   
+}
