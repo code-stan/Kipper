@@ -3,8 +3,8 @@
     min-width: 30rem;
     padding: 3rem;
     background-color: $Pale-White;
-    margin: 25vh auto 0;
-    @include flex(left, center);
+    // margin: 25vh auto 0;
+    @include flex(unset, center);
     flex-direction: column;
     gap: 2em;
     border-radius: 1rem;
